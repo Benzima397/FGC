@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Church Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+      background: #f9f9f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #e67e22;
+    }
+    section {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 150px;
+    }
+    button {
+      margin-top: 20px;
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #cf711b;
+    }
+    .thank-you {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+    .contact-info {
+      margin-top: 30px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #e67e22;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Church Name</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="events.html">Events</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p class="thank-you">Thank you! We'll respond soon.</p>
+
+    <div class="contact-info">
+      <h2>Visit Us</h2>
+      <p>123 Church St, City, State</p>
+      <p>Sunday Service: 10:00 AM</p>
+      <p>Phone: (123) 456-7890</p>
+      <p>Email: info@churchname.org</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Church Name</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const thankYou = document.querySelector('.thank-you');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      thankYou.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Church Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      color: #5b5353;
+      background: #f9f9f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #e67e22;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .hero .btn {
+      background: #e67e22;
+      color: white;
+      padding: 15px 30px;
+      margin: 0 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .hero .btn:hover {
+      background: #cf711b;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .events, .about, .sermon {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .events .event-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .event-item {
+      flex: 1 1 45%;
+      background: #fef9f4;
+      padding: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .event-item:hover {
+      background: #f4e1c1;
+    }
+    .event-item h3 {
+      margin: 0 0 5px 0;
+      color: #e67e22;
+    }
+    .footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: #e67e22;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1.2em;
+      }
+      .events .event-list {
+        flex-direction: column;
+      }
+      .event-item {
+        flex: 1 1 100%;
+      }
+      nav {
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Church Name</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="ministries.html">Ministries</a>
+    <a href="events.html">Events</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="Donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to Church Name</h1>
+  <p>A place to grow in faith and community</p>
+  <a href="#" class="btn">Watch Live</a>
+</div>
+
+<section>
+  <div class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-list" id="eventList">
+      <div class="event-item" tabindex="0" data-details="Join us for food and fellowship at the park on July 10. Time: 12 PM - 4 PM. Location: Central Park.">
+        <h3>July 10 - Community Picnic</h3>
+        <p>Join us for food and fellowship at the park.</p>
+      </div>
+      <div class="event-item" tabindex="0" data-details="Fun activities and Bible study for teens on July 17. Time: 6 PM - 8 PM. Location: Church Hall.">
+        <h3>July 17 - Youth Group Meeting</h3>
+        <p>Fun activities and Bible study for teens.</p>
+      </div>
+    </div>
+    <a href="#">More Events →</a>
+  </div>
+
+  <div class="about">
+    <h2>About Us</h2>
+    <p>We are a welcoming community dedicated to sharing the love of Christ and serving our neighbors.</p>
+    <a href="about.html">Learn More →</a>
+  </div>
+
+  <div class="sermon">
+    <h2>Latest Sermon</h2>
+    <h3>Faith in Action</h3>
+    <p>June 23, 2025</p>
+    <p>Discover how faith can transform your daily life and community.</p>
+    <a href="#">Watch Now →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>123 Church St, City, State | (123) 456-7890 | info@churchname.org</p>
+  <p>
+    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+  </p>
+  <p>©️ 2025 Church Name</p>
+</footer>
+
+<script>
+  // Simple event detail popup
+  document.querySelectorAll('.event-item').forEach(item => {
+    item.addEventListener('click', () => {
+      alert(item.getAttribute('data-details'));
+    });
+    item.addEventListener('keypress', e => {
+      if (e.key === 'Enter') {
+        alert(item.getAttribute('data-details'));
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

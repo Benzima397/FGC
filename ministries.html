@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ministries - Church Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+      background: #f9f9f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #e67e22;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 10px;
+    }
+    .ministry-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    .ministry-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .ministry-card:hover {
+      transform: translateY(-5px);
+    }
+    .ministry-img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+    .ministry-content {
+      padding: 20px;
+    }
+    .ministry-content h3 {
+      color: #e67e22;
+      margin-top: 0;
+    }
+    .ministry-content p {
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #e67e22;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #cf711b;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #e67e22;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+      .ministry-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Church Name</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="events.html">Events</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Our Ministries</h1>
+    <div class="ministry-list">
+      <!-- Youth Ministry -->
+      <div class="ministry-card">
+        <div class="ministry-img" style="background-image: url('https://images.unsplash.com/photo-1531058244989-0bca1e0d0a1a?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="ministry-content">
+          <h3>Youth Ministry</h3>
+          <p>A vibrant community for teens (ages 12-18) to grow in faith through Bible study, worship, and fun activities.</p>
+          <p><strong>Meets:</strong> Sundays at 5 PM & Wednesdays at 6:30 PM</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Worship Team -->
+      <div class="ministry-card">
+        <div class="ministry-img" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="ministry-content">
+          <h3>Worship Team</h3>
+          <p>Join our musicians and vocalists in leading the congregation in praise and worship.</p>
+          <p><strong>Rehearsals:</strong> Thursdays at 7 PM</p>
+          <a href="#" class="btn">Join the Team</a>
+        </div>
+      </div>
+
+      <!-- Outreach -->
+      <div class="ministry-card">
+        <div class="ministry-img" style="background-image: url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="ministry-content">
+          <h3>Outreach</h3>
+          <p>Serving our local community through food drives, mentorship, and neighborhood events.</p>
+          <p><strong>Next Event:</strong> Community Picnic on July 10</p>
+          <a href="#" class="btn">Volunteer</a>
+        </div>
+      </div>
+
+      <!-- Women's Fellowship -->
+      <div class="ministry-card">
+        <div class="ministry-img" style="background-image: url('https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="ministry-content">
+          <h3>Women's Fellowship</h3>
+          <p>A space for women to connect, study Scripture, and support one another.</p>
+          <p><strong>Meets:</strong> 1st Saturday of the month at 10 AM</p>
+          <a href="#" class="btn">Join Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>123 Church St, City, State | (123) 456-7890 | info@churchname.org</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+    </p>
+    <p>© 2025 Church Name</p>
+  </footer>
+</body>
+</html>
